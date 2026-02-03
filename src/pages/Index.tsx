@@ -13,7 +13,8 @@ import {
   Shield,
   Video,
   MapPin,
-  Quote
+  Quote,
+  ArrowLeft
 } from "lucide-react";
 
 // Import calming images
@@ -95,12 +96,21 @@ export default function Index() {
               with compassion, expertise, and evidence-based care. Your journey to peace begins here.
             </p>
             <div className="flex flex-col sm:flex-row items-start gap-4">
-              <Button asChild variant="hero" size="xl">
-                <Link to="/book-appointment">
-                  Book a Free Consultation
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-              </Button>
+                <Button asChild variant="hero" size="xl">
+  <Link
+    to="/book-appointment"
+    className="
+      flex items-center justify-center
+      text-xs sm:text-base md:text-lg lg:text-xl
+      gap-2
+    "
+  >  <ArrowLeft className="w-5 h-5" />
+    Book  a Free Consultation
+    <ArrowRight className="w-5 h-5" />
+  </Link>
+</Button>
+
+
               <Button asChild variant="hero-outline" size="xl">
                 <Link to="/about">Learn More About Me</Link>
               </Button>
@@ -360,15 +370,33 @@ export default function Index() {
               Reaching out takes courage. I offer a free 15-minute consultation to discuss your needs 
               and see if we're a good fit. You deserve support on your healing journey.
             </p>
-            <Button asChild variant="hero" size="xl">
-              <Link to="/book-appointment">
-                Schedule Your Free Consultation
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
+                     <Button
+  asChild
+  variant="hero"
+  className="
+    w-full max-w-full mx-auto
+    px-6 py-6 sm:px-8 sm:py-5 md:px-10 md:py-6 lg:px-12 lg:py-7 xl:px-14 xl:py-8
+    text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl
+    bg-blue-400 hover:bg-blue-500 text-white
+    rounded-xl shadow-md shadow-blue-200/40
+    flex items-center justify-center
+    gap-2
+    transition-all duration-300 ease-in-out
+    text-center
+  "
+>
+  <Link to="/book-appointment" className="flex items-center">
+    <span className="whitespace-pre-line text-center">Schedule Your Free Consultation</span>
+    <ArrowRight className="w-5 h-5 sm:w-6 md:w-6 lg:w-7 xl:w-8 ml-2" />
+  </Link>
+</Button>
+
+
+
           </div>
         </div>
       </section>
     </Layout>
   );
 }
+
