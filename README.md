@@ -8,7 +8,7 @@ The platform allows users to explore therapy services, learn about the psycholog
 🔗 Project Overview
 
 Peace Lily Path: Counseling Services is a full-stack web application designed for a mental health professional. The website focuses on trust, clarity, and ease of use while allowing secure data storage and appointment handling.
-
+Used Web 3 Forms for the contact section.
 ✨ Features
 
 🧠 Professional therapy services showcase
